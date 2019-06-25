@@ -32,3 +32,8 @@ if (isset($_POST["inscription"])) {
 	else  echo "echec";
 
 }
+
+if (isset($_POST["valider"])) {
+	
+	validerUser($_POST["id"]);
+}

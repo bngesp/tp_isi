@@ -25,9 +25,12 @@ $alluser = getAllUSer();
 					<td><?= $value["nom"];?></td>
 					<td><?= $value["login"];?></td>
 					<td>
+						<?php if($value["statut"] == false){?>
 						<form action="traitement.php" method="post">
 							<input type="hidden" value=<?= $value["id"];?>>
-							<button type="submit" name="valider">Valider</button></form>
+							<button type="submit" name="valider">Valider</button>
+						</form>
+						<?php }else echo "user Valide !!"; ?>
 					</td>
 				</tr>
 

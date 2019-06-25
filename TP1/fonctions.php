@@ -58,7 +58,6 @@ function saveUser($nom, $prenom, $mail, $login, $mdp)
 	return $result;
 }
 
-
 function getAllUSer()
 {
 	$bd = getDB();
@@ -72,3 +71,23 @@ function getAllUSer()
 	return $alluser;
 	
 }
+
+function validerUser($id)
+{
+	$bd = getDB();
+	if (!is_null($bd)) {
+		$req = "UPDATE users set statut=true where id=?";
+		$el = $bd->prepare($req);
+		$el->execute(array($id));
+	}
+}
+
+
+
+
+
+
+
+
+
+

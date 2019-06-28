@@ -1,2 +1,2 @@
 # tp_isi
-TP/TD du cours de developpement php avance ISI
+TP/TD du cours de developpement web php avance ISI

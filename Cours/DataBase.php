@@ -2,9 +2,13 @@
 /**
  * Connexion a la base de donnees
  */
+namespace Cours\DB;
+use \PDO;
+
+// Cours\DB\DataBase
 class DataBase 
 {
-    use fonction;
+    //use fonction;
     
     private $dbname = DataBaseConstante::DB_NAME;
     private $dbhost = DataBaseConstante::DB_HOST; 

@@ -2,6 +2,8 @@
 /**
  * Classe pour stocker les constantes de classe 
  */
+namespace Cours\DB;
+
 class DataBaseConstante 
 {
     

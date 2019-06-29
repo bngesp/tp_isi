@@ -27,7 +27,7 @@ $alluser = getAllUSer();
 					<td>
 						<?php if($value["statut"] == false){?>
 						<form action="traitement.php" method="post">
-							<input type="hidden" value=<?= $value["id"];?>>
+							<input type="hidden" value="<?= $value["id"];?>"  name="id">
 							<button type="submit" name="valider">Valider</button>
 						</form>
 						<?php }else echo "user Valide !!"; ?>

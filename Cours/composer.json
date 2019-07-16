@@ -1,0 +1,24 @@
+{
+    "name": "bngesp/cours_isi",
+    "description": "une description du code",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "bngesp",
+            "email": "bassiroungom@esp.sn"
+        }
+    ],
+    "require": {
+        "php":"^7.0",
+        "symfony/var-dumper": "^4.3",
+        "swiftmailer/swiftmailer": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Namespaces\\":"src"
+        }
+
+    }
+
+    
+}

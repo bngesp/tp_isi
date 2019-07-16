@@ -1,18 +1,30 @@
 <?php
-	
-// function __autoload($class_name)
-// {
-// 	$class_name = str_replace("\\", "/", $class_name);
-// 	var_dump($class_name);
-// 	require $class_name.".php";
-// }	
-include 'Autoload/Autoloader.php';
+use Namespaces\Classe\Mailer;
 
-use Namespaces\User\Personne;
-use Namespaces\DB\DataBase;
+require "./vendor/autoload.php";
 
-$user = new Personne("wade", "Massamba");
-$bd = new DataBase();
+// // Create the Transport
+ //$transport = (new Swift_SmtpTransport('smtp.gmail.com', 587,'tls'))
+//   ->setUsername('iss17005@gmail.com')
+//   ->setPassword('toby1705')
+// ;
 
-var_dump($bd);
+// // Create the Mailer using your created Transport
+// $mailer = new Swift_Mailer($transport);
 
+// // Create a message
+// $message = (new Swift_Message('test Message'))
+//   ->setFrom(['masswade@gmail.com' => 'Massamba Wade'])
+//   ->setTo(['bassiroungom@esp.sn', 'dembathioune96@gmail.com' => 'Demba Thioune'])
+//   ->setBody('Ceci est un message de test')
+//   ; //fluence
+
+// // Send the message
+// $result = $mailer->send($message);
+
+
+$msg = new Mailer("un object");
+$msg->setTo(array(
+    'bassiroungom@esp.sn', 'dembathioune96@gmail.com'
+))->envoi("message a envoyer")
+;
